@@ -27,10 +27,8 @@ const Login = ({ loginPopup, setLoginPopup, handleRegisterPopup }) => {
       const response = await axios.post('http://localhost:3000/api/login', formData);
       console.log('Login successful:', response.data);
   
- 
       const { token } = response.data;
   
-    
       localStorage.setItem('x-auth-token', token);
   
       setSuccessMessage('Login successful!');
